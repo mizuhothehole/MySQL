@@ -53,6 +53,18 @@ Query OK, 0 rows affected (0.06 sec)
 
 mysql> desc HOME_ACCOUNT;
 
+mysql> 
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| ID           | int(11)      | NO   | PRI | NULL    | auto_increment |
+| ISSUE_DATE   | date         | YES  |     | NULL    |                |
+| ISSUE_TITLE  | varchar(100) | YES  |     | NULL    |                |
+| ISSUE_AMOUNT | varchar(10)  | YES  |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.02 sec)
+
+mysql> 
 
 mysql> insert into HOME_ACCOUNT values (1,2017-05-03,"food",300);
 Query OK, 1 row affected, 1 warning (0.01 sec)
@@ -81,15 +93,3 @@ mysql> select * from HOME_ACCOUNT;
 +----+------------+-------------+--------------+
 1 row in set (0.00 sec)
 
-mysql> 
-+--------------+--------------+------+-----+---------+----------------+
-| Field        | Type         | Null | Key | Default | Extra          |
-+--------------+--------------+------+-----+---------+----------------+
-| ID           | int(11)      | NO   | PRI | NULL    | auto_increment |
-| ISSUE_DATE   | date         | YES  |     | NULL    |                |
-| ISSUE_TITLE  | varchar(100) | YES  |     | NULL    |                |
-| ISSUE_AMOUNT | varchar(10)  | YES  |     | NULL    |                |
-+--------------+--------------+------+-----+---------+----------------+
-4 rows in set (0.02 sec)
-
-mysql> 
