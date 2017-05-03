@@ -45,3 +45,21 @@ mysql> show databases;
 4 rows in set (0.01 sec)
 
 it is also having the mysql database just like MariaDB
+
+mysql> use test;
+Database changed
+mysql> create table HOME_ACCOUNT (ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,ISSUE_DATE DATE,ISSUE_TITLE VARCHAR(100),ISSUE_AMOUNT VARCHAR(10));
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> desc HOME_ACCOUNT;
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| ID           | int(11)      | NO   | PRI | NULL    | auto_increment |
+| ISSUE_DATE   | date         | YES  |     | NULL    |                |
+| ISSUE_TITLE  | varchar(100) | YES  |     | NULL    |                |
+| ISSUE_AMOUNT | varchar(10)  | YES  |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.02 sec)
+
+mysql> 
