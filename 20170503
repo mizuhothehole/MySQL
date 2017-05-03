@@ -52,6 +52,36 @@ mysql> create table HOME_ACCOUNT (ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,ISS
 Query OK, 0 rows affected (0.06 sec)
 
 mysql> desc HOME_ACCOUNT;
+
+
+mysql> insert into HOME_ACCOUNT values (1,2017-05-03,"food",300);
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+mysql> select * from HOME_ACCOUNT;
++----+------------+-------------+--------------+
+| ID | ISSUE_DATE | ISSUE_TITLE | ISSUE_AMOUNT |
++----+------------+-------------+--------------+
+|  1 | 0000-00-00 | food        | 300          |
++----+------------+-------------+--------------+
+1 row in set (0.01 sec)
+
+mysql> update HOME_ACCOUNT set ISSUR_DATE = "2017-05-03";
+ERROR 1054 (42S22): Unknown column 'ISSUR_DATE' in 'field list'
+mysql> update HOME_ACCOUNT set ISSUR_DATE = "2017-05-03";
+ERROR 1054 (42S22): Unknown column 'ISSUR_DATE' in 'field list'
+mysql> update HOME_ACCOUNT set ISSUE_DATE = "2017-05-03";
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from HOME_ACCOUNT;
++----+------------+-------------+--------------+
+| ID | ISSUE_DATE | ISSUE_TITLE | ISSUE_AMOUNT |
++----+------------+-------------+--------------+
+|  1 | 2017-05-03 | food        | 300          |
++----+------------+-------------+--------------+
+1 row in set (0.00 sec)
+
+mysql> 
 +--------------+--------------+------+-----+---------+----------------+
 | Field        | Type         | Null | Key | Default | Extra          |
 +--------------+--------------+------+-----+---------+----------------+
